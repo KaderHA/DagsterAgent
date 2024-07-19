@@ -1,0 +1,15 @@
+instance_class:
+  module: dagster_cloud.instance
+  class: DagsterCloudAgentInstance
+
+dagster_cloud_api:
+  agent_token: "${DAGSTER_TOKEN}"
+  branch_deployments: true # enables branch deployments
+  deployment: prod
+
+user_code_launcher:
+  module: dagster_cloud.workspace.docker
+  class: DockerUserCodeLauncher
+  config:
+    networks:
+      - dagster_cloud_agent
