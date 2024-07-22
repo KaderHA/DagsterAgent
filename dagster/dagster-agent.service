@@ -1,0 +1,10 @@
+[Unit]
+Description=[Dagster-agent]
+ 
+[Service]
+Type=simple
+StandardOutput=journal
+ExecStart=/bin/bash /dagster/dagster/dagster-service.sh
+WorkingDirectory=/dagster/dagster
+[Install]
+WantedBy=default.target

@@ -1,0 +1,1 @@
+dagster-cloud agent run .
