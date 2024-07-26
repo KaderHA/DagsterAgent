@@ -3,11 +3,12 @@
 instance_class:
   module: dagster_cloud.instance
   class: DagsterCloudAgentInstance
- 
+
 dagster_cloud_api:
-  agent_token: ${DAGSTER_TOKEN}
+  agent_token: DAGSTER_TOKEN_REPLACE_ME
+  branch_deployments: true # enables branch deployments
   deployment: prod
- 
+
 user_code_launcher:
   module: dagster_cloud.workspace.user_code_launcher
   class: ProcessUserCodeLauncher
